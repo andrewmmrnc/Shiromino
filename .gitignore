@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Fisiere
+shiromino.js
+setari.json
+
 # Runtime data
 pids
 *.pid
