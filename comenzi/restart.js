@@ -1,5 +1,6 @@
 exports.run = (client, msg) => {
   msg.channel.sendMessage("Adorm ...")
+  msg.channel.sendMessage("M-am trezit ...")
     .then(() => {
       process.exit();
     })
