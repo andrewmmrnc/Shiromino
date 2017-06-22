@@ -3,7 +3,7 @@ const moment = require("moment");
 require("moment-duration-format");
 
 exports.run = (client, msg) => {
-  const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+  const duration = moment.duration(client.uptime).format(" Z [zile], O [ore], m [minute], s [secunde]");
   msg.channel.sendCode("asciidoc", `= STATUS SHIROMINO BOT =
   
 • Memorie folosita  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
@@ -11,7 +11,8 @@ exports.run = (client, msg) => {
 • Utilizatori       :: ${client.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}
 • Servere           :: ${client.guilds.size.toLocaleString()}
 • Canale            :: ${client.channels.size.toLocaleString()}
-• Discord.js        :: v${Discord.version}`);
+• Discord.js        :: v${Discord.version}
+• Prefix folosit    :: ~`);
 };
 
 exports.conf = {
